@@ -1,0 +1,130 @@
+.how {
+  padding-top: 185px;
+  overflow-x: hidden;
+  background-image: url('../img/how-effect.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 0;
+}
+.how__items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: 1000px) {
+    flex-wrap: wrap;
+    grid-gap: 50px 0;
+  }
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+    grid-gap: 130px 0;
+  }
+}
+.how__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &:last-child {
+    .how__icon {
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  @media (max-width: 1000px) {
+    flex-basis: 49%;
+  }
+  @media (max-width: 1000px) {
+    &:nth-child(2) {
+      .how__icon {
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    &:nth-child(2) {
+      .how__icon {
+        &:after {
+          display: block;
+        }
+      }
+    }
+  }
+}
+.how__title {
+  text-align: center;
+  font-family: 'Oxanium';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 130px;
+  margin-bottom: 25px;
+
+  @media (max-width: 700px) {
+    font-size: 36px;
+  }
+}
+.how__icon {
+  background: #372839;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 105px;
+  height: 105px;
+  margin-bottom: 30px;
+  position: relative;
+
+  img {
+    max-width: 50%;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -50%;
+    transform: translateY(-50%) translateX(100%);
+    background: url('../img/how1.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 165px;
+    height: 10px;
+  }
+  @media (max-width: 1200px) {
+    &:after {
+      right: -30%;
+      width: 100px;
+    }
+  }
+  @media (max-width: 1000px) {
+    &:after {
+      right: -30%;
+      width: 60px;
+    }
+  }
+  @media (max-width: 500px) {
+    &:after {
+      transform: translateX(-100%) translateY(100%) rotate(90deg);
+      height: 80px;
+      width: 80px;
+      top: 100%;
+    }
+  }
+}
+.how__icon-title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: capitalize;
+  color: #ffce4e;
+
+  @media (max-width: 700px) {
+    font-size: 18px;
+  }
+}

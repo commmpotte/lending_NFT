@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>SVG stack preview | svg-sprite</title>
+        <style>
+            body {
+                padding: 0;
+                margin: 0;
+                color: #666;
+                background: #fafafa;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 1em;
+                line-height: 1.4;
+            }
+
+            header {
+                display: block;
+                padding: 3em 3em 2em;
+                background-color: #fff;
+            }
+
+            header p {
+                margin: 2em 0 0;
+            }
+
+            section {
+                border-top: 1px solid #eee;
+                padding: 2em 3em 0;
+            }
+
+            section ul {
+                margin: 0;
+                padding: 0;
+            }
+
+            section li {
+                display: inline-block;
+                background-color: #fff;
+                position: relative;
+                margin: 0 2em 2em 0;
+                vertical-align: top;
+                border: 1px solid #ccc;
+                padding: 1em 1em 3em;
+                cursor: default;
+            }
+
+            .icon-box {
+                margin: 0;
+                width: 144px;
+                height: 144px;
+                position: relative;
+                background: #ccc url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12'%3E%3Cpath fill='%23fff' d='M6 0h6v6H6zM0 6h6v6H0z'/%3E%3C/svg%3E") top left repeat;
+                border: 1px solid #ccc;
+                display: table-cell;
+                vertical-align: middle;
+                text-align: center;
+            }
+
+            .icon {
+                display: inline-block;
+            }
+
+            h1 {
+                margin-top: 0;
+            }
+
+            h2 {
+                margin: 0;
+                padding: 0;
+                font-size: 1em;
+                font-weight: 400;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                position: absolute;
+                left: 1em;
+                right: 1em;
+                bottom: 1em;
+            }
+
+            footer {
+                display: block;
+                margin: 0;
+                padding: 0 3em 3em;
+            }
+
+            footer p {
+                margin: 0;
+                font-size: .7em;
+            }
+
+            footer a {
+                color: #0f7595;
+                margin-left: 0;
+            }
+        </style>
+
+<!--
+Sprite shape dimensions
+====================================================================================================
+You will need to set the sprite shape dimensions via CSS when you use them as stack SVGs, otherwise
+they would become a huge 100% in size. You may use the following dimension classes for doing so.
+They might well be outsourced to an external stylesheet of course.
+-->
+
+<style>
+ .svg-arrow-down-dims { width: 24px; height: 47px; }
+ .svg-arrow-right-dims { width: 54px; height: 54px; }
+ .svg-binance3-dims { width: 204px; height: 41px; }
+ .svg-bitmex4-dims { width: 178px; height: 29px; }
+ .svg-blockchain2-dims { width: 309px; height: 24px; }
+ .svg-burger-dims { width: 24px; height: 16px; }
+ .svg-close-dims { width: 400px; height: 400px; }
+ .svg-coinbase1-dims { width: 149px; height: 33px; }
+ .svg-facebook-dims { width: 15px; height: 27px; }
+ .svg-google-dims { width: 29px; height: 27px; }
+ .svg-heart-dims { width: 28px; height: 26px; }
+ .svg-how1-dims { width: 48px; height: 48px; }
+ .svg-how2-dims { width: 48px; height: 48px; }
+ .svg-how3-dims { width: 48px; height: 48px; }
+ .svg-how4-dims { width: 48px; height: 48px; }
+ .svg-twitter-dims { width: 33px; height: 28px; }
+ .svg-youtube-dims { width: 38px; height: 27px; }
+</style>
+
+<!--
+====================================================================================================
+-->
+
+    </head>
+    <body>
+        <header>
+            <h1>SVG stack preview</h1>
+            <p>This preview features an SVG stack. Please have a look at the HTML source for further details and be aware of the following constraints:</p>
+            <ul>
+                <li>Your browser has to <a href="https://caniuse.com/svg-fragment" target="_blank" rel="noopener noreferrer">support SVG fragment identifiers</a> for SVG stacks to work.</li>
+                <li>Support for SVG fragment identifiers hasn't always been that decent. For older browsers you will have to use some prolyfill like <a href="https://github.com/preciousforever/SVG-Stacker/blob/master/fixsvgstack.jquery.js" target="_blank" rel="noopener noreferrer">fixsvgstack.jquery.js</a>.</li>
+            </ul>
+        </header>
+        <section>
+
+<!--
+SVG stack
+====================================================================================================
+These SVG images make use of fragment identifiers (IDs) to reference certain portions of the
+external sprite. By default, all shapes inside the sprite are hidden by CSS. The `:target` pseudo
+selector is used to show the very shape that is referenced by the fragment identifier.
+-->
+
+            <ul>
+
+             <li title="arrow-down">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#arrow-down" class="svg-arrow-down-dims" alt="arrow-down">
+                    </div>
+                    <h2>arrow-down, </h2>
+                </li>
+             <li title="arrow-right">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#arrow-right" class="svg-arrow-right-dims" alt="arrow-right">
+                    </div>
+                    <h2>arrow-right, </h2>
+                </li>
+             <li title="binance3">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#binance3" class="svg-binance3-dims" alt="binance3">
+                    </div>
+                    <h2>binance3, </h2>
+                </li>
+             <li title="bitmex4">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#bitmex4" class="svg-bitmex4-dims" alt="bitmex4">
+                    </div>
+                    <h2>bitmex4, </h2>
+                </li>
+             <li title="blockchain2">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#blockchain2" class="svg-blockchain2-dims" alt="blockchain2">
+                    </div>
+                    <h2>blockchain2, </h2>
+                </li>
+             <li title="burger">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#burger" class="svg-burger-dims" alt="burger">
+                    </div>
+                    <h2>burger, </h2>
+                </li>
+             <li title="close">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#close" class="svg-close-dims" alt="close">
+                    </div>
+                    <h2>close, </h2>
+                </li>
+             <li title="coinbase1">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#coinbase1" class="svg-coinbase1-dims" alt="coinbase1">
+                    </div>
+                    <h2>coinbase1, </h2>
+                </li>
+             <li title="facebook">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#facebook" class="svg-facebook-dims" alt="facebook">
+                    </div>
+                    <h2>facebook, </h2>
+                </li>
+             <li title="google">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#google" class="svg-google-dims" alt="google">
+                    </div>
+                    <h2>google, </h2>
+                </li>
+             <li title="heart">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#heart" class="svg-heart-dims" alt="heart">
+                    </div>
+                    <h2>heart, </h2>
+                </li>
+             <li title="how1">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#how1" class="svg-how1-dims" alt="how1">
+                    </div>
+                    <h2>how1, </h2>
+                </li>
+             <li title="how2">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#how2" class="svg-how2-dims" alt="how2">
+                    </div>
+                    <h2>how2, </h2>
+                </li>
+             <li title="how3">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#how3" class="svg-how3-dims" alt="how3">
+                    </div>
+                    <h2>how3, </h2>
+                </li>
+             <li title="how4">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#how4" class="svg-how4-dims" alt="how4">
+                    </div>
+                    <h2>how4, </h2>
+                </li>
+             <li title="twitter">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#twitter" class="svg-twitter-dims" alt="twitter">
+                    </div>
+                    <h2>twitter, </h2>
+                </li>
+             <li title="youtube">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#youtube" class="svg-youtube-dims" alt="youtube">
+                    </div>
+                    <h2>youtube, </h2>
+                </li>
+         </ul>
+
+<!--
+====================================================================================================
+-->
+
+        </section>
+        <footer>
+            <p>Generated at Thu, 19 Jan 2023 10:37:51 GMT by <a href="https://github.com/svg-sprite/svg-sprite" target="_blank" rel="noopener noreferrer">svg-sprite</a>.</p>
+        </footer>
+    </body>
+</html>

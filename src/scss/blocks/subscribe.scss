@@ -1,0 +1,98 @@
+.subscribe {
+  background: url('../img/subscribe.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 80px;
+  padding: 115px 0;
+  overflow-x: hidden;
+  position: relative;
+
+  &:before {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    right: 10%;
+    width: 600px;
+    height: 400px;
+    background-image: url('../img/subscribe-effect.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+.subscribe__title {
+  font-family: 'Oxanium';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 130%;
+  text-align: center;
+  color: #f5fbf2;
+  margin-bottom: 30px;
+  @media (max-width: 600px) {
+    font-size: 32px;
+  }
+}
+.subscribe__main {
+  justify-content: space-between;
+}
+.subscribe__content {
+  display: flex;
+  border: 1px solid #e7b226;
+  width: 680px;
+  margin: 0 auto;
+
+  @media (max-width: 800px) {
+    width: 100%;
+  }
+  @media (max-width: 500px) {
+    flex-direction: column;
+    border: 0;
+  }
+}
+.subscribe__input {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 35px;
+  color: $white;
+  background: none;
+  flex-grow: 1;
+  border: 0;
+  outline: 0;
+  padding: 0px 50px 0px 50px;
+
+  &::placeholder {
+    color: #a48ea9;
+  }
+
+  @media (max-width: 600px) {
+    padding: 15px 15px 15px 20px;
+    font-size: 20px;
+  }
+  @media (max-width: 500px) {
+    border: 1px solid #e7b226;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+.subscribe__btn {
+  background: #e7b226;
+  padding: 30px 65px;
+  min-height: 100%;
+  display: block;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 35px;
+  color: #251928;
+  width: 245px;
+
+  @media (max-width: 600px) {
+    width: 145px;
+    font-size: 20px;
+    padding: 15px 30px;
+  }
+  @media (max-width: 500px) {
+    margin: 0 auto;
+    font-size: 20px;
+    padding: 15px 25px;
+  }
+}

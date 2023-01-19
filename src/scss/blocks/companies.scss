@@ -1,0 +1,22 @@
+.companies {
+  margin-top: 250px;
+  margin-bottom: 160px;
+  overflow-x: hidden;
+
+  @media (max-width: 850px) {
+    margin: 75px 0px 95px 0px;
+  }
+}
+.companies__main {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  grid-gap: 0px 30px;
+  img {
+    width: 15%;
+    @media (max-width: 950px) {
+      width: 33%;
+    }
+  }
+}
