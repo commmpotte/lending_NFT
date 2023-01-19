@@ -5,4 +5,4 @@ In this part of the road to FE development, I created the NFT lending one-page w
 
 How to start? I was using bash terminal. In one window (in real time) start with: npm run dev. In another window don't forget to collect your svg-icons: npm run svgSprive. 
 
-Of course I know, that "landind" is writing with a letter "a". Sorry about that!
+Of course I know, that "landing" is writing with a letter "a". Sorry about that!
